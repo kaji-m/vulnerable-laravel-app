@@ -18,6 +18,7 @@ services:
       - .:/var/www/html:cached
       - ./docker/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./contrast_security.yaml:/etc/contrast/contrast_security.yaml
 
   database:
     image: mysql:5.7
