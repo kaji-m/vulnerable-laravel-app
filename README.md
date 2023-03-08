@@ -11,9 +11,10 @@ One of the talks recording is available at [YouTube](https://www.youtube.com/wat
 * PHP (>v7.1 preferably) & Composer
 
 # Installation
+* `cp .env.example .env`
 * `composer install`
 * `docker-compose up -d`
-* `docker exec vuln-app php artisan migrate --seed`
+* `docker exec vuln-app php artisan migrate --force --seed`
 
 # Vulnerabilities & tips
 ## SQL Injection
