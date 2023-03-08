@@ -3,6 +3,7 @@ version: '3.7'
 services:
   web:
     container_name: vuln-nginx
+    platform: linux/x86_64
     image: nginx:1.10
     ports:
       - 1234:80
@@ -12,6 +13,7 @@ services:
 
   app:
     container_name: vuln-app
+    platform: linux/x86_64
     build:
       context: .
     volumes:
@@ -22,6 +24,7 @@ services:
 
   database:
     image: mysql:5.7
+    platform: linux/x86_64
     ports:
       - 33061:3306
     container_name: vuln-database
